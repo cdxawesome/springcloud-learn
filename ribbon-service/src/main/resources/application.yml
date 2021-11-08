@@ -3,6 +3,11 @@ server:
 spring:
   application:
     name: ribbon-service
+  zipkin:
+    base-url: http://172.18.215.184:9411
+  sleuth:
+    sampler:
+      probability: 1 #设置sleuth的抽样收集概率
 eureka:
   client:
     register-with-eureka: true

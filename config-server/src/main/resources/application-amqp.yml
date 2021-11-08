@@ -1,0 +1,30 @@
+server:
+  port: 8904
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git: #配置存储配置信息的git仓库
+          uri: https://gitee.com/cdxawesome/springcloud-config.git
+          username: cdxawesome
+          password: feiZAO1994816
+          clone-on-start: true #启动时直接从git获取配置
+          search-paths: config
+  rabbitmq:
+    host: 172.18.215.184
+    port: 5672
+    username: guest
+    password: guest
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka
+    fetch-registry: true
+    register-with-eureka: true
+management:
+  endpoints: #暴露bus刷新配置的端点
+    web:
+      exposure:
+        include: 'bus-refresh'
