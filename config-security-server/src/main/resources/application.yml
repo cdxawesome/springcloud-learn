@@ -1,0 +1,17 @@
+server:
+  port: 8905
+spring:
+  application:
+    name: config-security-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/cdxawesome/springcloud-config.git
+          username: cdxawesome
+          password: feiZAO1994816
+          clone-on-start: true
+  security: #配置用户名和密码
+    user:
+      name: simple
+      password: 123456
