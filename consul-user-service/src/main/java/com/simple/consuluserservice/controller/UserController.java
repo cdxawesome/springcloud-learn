@@ -1,8 +1,8 @@
-package com.simple.userservice.controller;
+package com.simple.consuluserservice.controller;
 
 import com.simple.common.vo.CommonResult;
 import com.simple.common.vo.User;
-import com.simple.userservice.service.UserService;
+import com.simple.consuluserservice.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,10 +28,5 @@ public class UserController {
         User user = (User) commonResult.getData();
         LOGGER.info("根据id获取用户信息，用户名称为：{}", user.getUsername());
         return commonResult;
-    }
-
-    @GetMapping("/getByUsername")
-    public CommonResult getByUsername(@RequestParam String username) {
-        return userService.getUserByUsername(username);
     }
 }

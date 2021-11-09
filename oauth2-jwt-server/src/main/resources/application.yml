@@ -1,0 +1,8 @@
+server:
+  port: 9402
+spring:
+  application:
+    name: oauth2-jwt-service
+  redis:
+    host: 172.18.215.184
+    port: 6379

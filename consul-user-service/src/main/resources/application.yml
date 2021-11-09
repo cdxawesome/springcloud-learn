@@ -1,0 +1,16 @@
+server:
+  port: 8206
+spring:
+  application:
+    name: consul-user-service
+  zipkin:
+    base-url: http://172.18.215.184:9411
+  sleuth:
+    sampler:
+      probability: 1 #设置sleuth的抽样收集概率
+  cloud:
+    consul: #Consul服务注册发现配置
+      host: 172.18.215.184
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}

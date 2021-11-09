@@ -1,8 +1,8 @@
-package com.simple.userservice.service.impl;
+package com.simple.consuluserservice.service.impl;
 
-import com.simple.userservice.service.UserService;
 import com.simple.common.vo.CommonResult;
 import com.simple.common.vo.User;
+import com.simple.consuluserservice.service.UserService;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -17,15 +17,6 @@ public class UserServiceImpl implements UserService {
         User user = new User();
         user.setId(id);
         user.setUsername("simple");
-        user.setAge(27);
-        user.setAddress("广西桂林市荔浦市");
-        return new CommonResult(user, "操作成功", 200);
-    }
-
-    @Override
-    public CommonResult getUserByUsername(String username) {
-        User user = new User();
-        user.setUsername(username);
         user.setAge(27);
         user.setAddress("广西桂林市荔浦市");
         return new CommonResult(user, "操作成功", 200);
